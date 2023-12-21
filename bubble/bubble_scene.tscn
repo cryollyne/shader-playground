@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvkgaotviqxf1"]
+
+[ext_resource type="Shader" path="res://bubble/bubble.gdshader" id="1_ookwp"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_nnp0l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7fa0f"]
+render_priority = 0
+shader = ExtResource("1_ookwp")
+
+[node name="Bubble Scene" type="Node3D"]
+
+[node name="Bubble" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_nnp0l")
+surface_material_override/0 = SubResource("ShaderMaterial_7fa0f")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.373688, -0.833327, 0.407338, 0.438394, 0.545682, 0.714172, -0.817415, -0.0883031, 0.56924, 5.77536, 6.42257, 6.64547)
+
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.494208, 9.37371)
+fov = 30.1
